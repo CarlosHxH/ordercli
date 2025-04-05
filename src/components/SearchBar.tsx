@@ -8,7 +8,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [query, setQuery] = useState<string>('');
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newQuery = e.target.value.toLowerCase();
+    const newQuery = e.target.value.toUpperCase();
     setQuery(newQuery);
     onSearch(newQuery);
   };
